@@ -1,5 +1,4 @@
 #!/bin/bash
-pacman -Sy --needed --noconfirm python --overwrite '*'
 mkdir -p ~/bin
 mkdir -p ~/android/lineage
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
