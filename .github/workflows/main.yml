@@ -31,8 +31,9 @@ jobs:
           ~/bin/repo init -u https://github.com/LineageOS/android.git -b lineage-19.1 
           ~/bin/repo sync 
           tar -czvf cd ~/android/lineage -C /root/file.tar.gz
-      - uses: echapmanFromBunnings/upload-release-assets@1.2
+      
       - name: upload to release
+        uses: echapmanFromBunnings/upload-release-assets@1.2
         with: 
           releaseTag: package
           files: /root/file.tar.gz
