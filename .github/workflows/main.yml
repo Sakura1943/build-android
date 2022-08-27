@@ -32,6 +32,7 @@ jobs:
           ~/bin/repo sync 
           tar -czvf cd ~/android/lineage -C /root/file.tar.gz
       - uses: echapmanFromBunnings/upload-release-assets@1.2
+      - name: upload to release
         with: 
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           releaseTag: package
