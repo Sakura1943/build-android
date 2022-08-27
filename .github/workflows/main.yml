@@ -23,15 +23,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: Sakura1943/build-android@main
       - uses: actions/checkout@v3
-      - name: install git
-        run: |
-          sudo pacman -Sy tar gzip git curl bc base base-devel jdk-openjdk
-          mkdir -p ~/bin && mkdir -p ~/android/lineage 
-          curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-          chmod a+x ~/bin/repo 
-          ~/bin/repo init -u https://github.com/LineageOS/android.git -b lineage-19.1 
-          ~/bin/repo sync 
-          tar -czvf cd ~/android/lineage -C /root/file.tar.gz
       
       - name: upload to release
         uses: ncipollo/release-action@v1.6.1
