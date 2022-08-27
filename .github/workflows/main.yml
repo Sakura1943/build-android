@@ -27,6 +27,7 @@ jobs:
       - uses: echapmanFromBunnings/upload-release-assets@1.2
         with: 
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          releaseTag: /root/file.tar.gz
+          releaseTag: package
+          files: /root/file.tar.gz
           
           
